@@ -17,22 +17,22 @@
             background-color: #f0f0f0;
             color: #333;
         }
-        .bbnb-breakfast-page {
-            position: relative;
-            padding: 18px;
-            background-color: rgba(254,195,59,255);
-            overflow: scroll;
-            max-width: 590px;
-            min-width: 590px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
-        }
         .bbnb-breakfast-page::-webkit-scrollbar { 
             display: none; /* Safari and Chrome */
         }
+        .page {
+            background-color: rgba(254,195,59,255);
+            padding-left: 18px;
+            padding-right: 18px;
+            max-width: 560px;
+            min-width: 560px;
+            box-shadow: 0 0 1000px rgba(0, 0, 0, 0.2);
+            overflow: scroll;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
         .container {
+            max-width: 100%;
             background-color: rgba(254,195,59,255);
             border-left: 2px solid #79552a;
             border-right: 2px solid #79552a;
@@ -61,8 +61,8 @@
             right: -26px;
             bottom: 0;
         }
-        .logo-container{
-            width: 385px;
+        .header-container{
+            width: 360px;
         }
         .subheading, .heading {
             text-align: left;
@@ -71,12 +71,12 @@
             line-height: 0.9;
         }
         .subheading {
-            font-size: 29px;
+            font-size: 27.5px;
             margin-top: 10px;
             margin-bottom: 0;
         }
         .heading {
-            font-size: 84px;
+            font-size: 80px;
             margin-top: 6px;
         }
         .combo-badge {
@@ -84,7 +84,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 22px;
             background-color: #563629;
-            left: 229px;
+            left: 218.5px;
             bottom: 12px;
             border-radius: 10px;
         }
@@ -93,7 +93,7 @@
             width: 150px;
             background-color: #bb2429;
             border-bottom-left-radius: 50px;
-            right: -27px;
+            right: -20px;
         }
         .clock-img {
             width: 65%;
@@ -107,25 +107,25 @@
         .dot-hr {
             height: 8px; 
             background-image: radial-gradient(circle closest-side, #563629 70%, transparent 72%);
-            background-size: 11.9px 9px; 
+            background-size: 11.5px 9px; 
             background-repeat: repeat-x; 
         }
         .menu-text {
             margin: 1.5px -15px 9px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 17px;
+            font-size: 16.5px;
             color: #59352b;
             line-height: 1.43;
         }
         .menu-items {
-            height: 528px;
+            height: 500px;
         }
         .menu-item {
             width: 50%;
             position: absolute;
         }
         .menu-item-1 {
-            left: 12px;
+            left: 16.5px;
             top: 2px;
             width: 51%;
         }
@@ -136,7 +136,7 @@
         }
         .menu-item-3 {
             left: 10px;
-            top: 157.5px;
+            top: 152.5px;
             width: 57%;
         }
         .menu-item-4 {
@@ -163,18 +163,18 @@
             position: absolute;
             top: 10px;
             left: 268px;
-            width: 78px;
+            width: 51px;
             height: 2px;
             background-color: #59352b;
             margin: 10px 0; 
         }
         .grab-food-visit {
-            font-size: 12.5px;
+            font-size: 11.5px;
             margin-top: -3px;
         }
         .badge-grab {
             font-family: 'Russo One', sans-serif;
-            font-size: 21.5px;
+            font-size: 21px;
             background-color: #01b657;
             border: 3px solid white;
             border-radius: 8px;
@@ -211,71 +211,73 @@
     </style>
 </head>
 <body>
-    <div class="bbnb-breakfast-page mx-auto m-0 position-relative py-0">
-        <div class="container position-relative pt-4 pb-2">
-            <div class="box-top-left position-absolute"></div>
-            <div class="box-bottom-left position-absolute"></div>
-            <div class="box-bottom-right position-absolute"></div>
-            <div class="logo-container position-relative mt-3">
-                <img height="45px" width="385px" decoding="async" src="images/logo.svg" alt="Logo">
-                <h3 class="subheading">THE PERFECT BREAKFAST</h3>
-                <h2 class="heading">PERFECT DAY!</h2>
-                <span class="combo-badge badge position-absolute px-2">COMBO SET</span>
-            </div>
-            <div class="clock-container position-absolute text-center pt-4 pb-2">
-                <div>
-                    <img class="clock-img" src="images/clock.png" alt="Clock">
-                    <p class="timing text-white">7AM-11AM</p>
+    <div class="bbnb-breakfast-screen m-0 py-0">
+        <div class="page mx-auto">
+            <div class="container position-relative pt-4 pb-2">
+                <div class="box-top-left position-absolute"></div>
+                <div class="box-bottom-left position-absolute"></div>
+                <div class="box-bottom-right position-absolute"></div>
+                <div class="header-container position-relative mt-3">
+                    <img class="logo-img" decoding="async" src="images/logo.svg" alt="Logo">
+                    <h3 class="subheading">THE PERFECT BREAKFAST</h3>
+                    <h2 class="heading">PERFECT DAY!</h2>
+                    <span class="combo-badge badge position-absolute px-2">COMBO SET</span>
                 </div>
-            </div>
-            <div class="dot-hr"></div>
-            <div class="menu pt-2 text-center">
-                <p class="menu-text">Start your morning with a delightful breakfast which sets the tone for a wonderful day ahead. Our delicious options are crafted to give you the perfect balance of taste. Whether you're rushing to work or enjoying your day, our breakfast is always right for you.</p>
-            </div>
-            <div class="dot-hr"></div>
-            <div class="menu-items position-relative mb-4">
-                <img class="menu-item menu-item-1" src="images/EDM-1.png" alt="menu-item-1">
-                <img class="menu-item menu-item-2" src="images/EDM-2.png" alt="menu-item-2">
-                <img class="menu-item menu-item-3" src="images/EDM-3.png" alt="menu-item-3">
-                <img class="menu-item menu-item-4" src="images/EDM-4.png" alt="menu-item-4">
-                <img class="menu-item menu-item-5" src="images/EDM-5.png" alt="menu-item-5">
-            </div>
-            <div class="row grab position-relative">
-                <p class="grab-food fw-bold mb-0 mt-1">We're now on Grab Food!</p>
-                <div class="line"></div>
-                <p class="grab-food-visit mb-0">Add a touch of joy to your mornings or Visit our outlet</p>
-                <span class="badge-grab badge position-absolute">GRAB NOW</span>
-            </div>
-            <div class="row cta pt-2 px-4 text-white">
-                <div class="col-4 ps-4 my-auto">
-                    <div class="footer-img-wrapper py-1 px-1 pe-2">
-                        <img class="footer-img" height="94px" width="114px" decoding="async" src="https://bbnb.sg/wp-content/uploads/2024/01/BBB-logo-FINAL-VERSION-Edited-1024x859.png" alt="bbnb logo">
+                <div class="clock-container position-absolute text-center pt-4 pb-2">
+                    <div>
+                        <img class="clock-img" src="images/clock.png" alt="Clock">
+                        <p class="timing text-white">7AM-11AM</p>
                     </div>
                 </div>
-                <div class="killiney col-4 d-flex flex-column justify-content-center px-3">
-                    <div class="bg-grey h-100 text-center d-flex flex-column justify-content-center py-3">
-                        <p class="fw-bold mb-2">BB&B KILLINEY</p>
-                        <p class="m-0">83 KILLINEY ROAD, </p>
-                        <p class="m-0">S239531</p>
-                        <p class="telephone m-0">
-                            <a href="tel:+6569963491">+65 6996 3491</a>
-                        </p>
-                    </div>
+                <div class="dot-hr"></div>
+                <div class="menu pt-2 text-center">
+                    <p class="menu-text">Start your morning with a delightful breakfast which sets the tone for a wonderful day ahead. Our delicious options are crafted to give you the perfect balance of taste. Whether you're rushing to work or enjoying your day, our breakfast is always right for you.</p>
                 </div>
-                <div class="phoenix col-4 d-flex flex-column justify-content-center px-3">
-                    <div class="bg-pink h-100 text-center d-flex flex-column justify-content-center py-3">
-                        <p class="fw-bold mb-2">BB&B PHOENIX </p>
-                        <p class="m-0">314A TANGLIN ROAD, </p>
-                        <p class="m-0">S247673</p>
-                        <p class="telephone m-0">
-                            <a href="tel:+6566100915">+65 6610 0915</a>
-                        </p>
+                <div class="dot-hr"></div>
+                <div class="menu-items position-relative mb-4">
+                    <img class="menu-item menu-item-1" src="images/EDM-1.png" alt="menu-item-1">
+                    <img class="menu-item menu-item-2" src="images/EDM-2.png" alt="menu-item-2">
+                    <img class="menu-item menu-item-3" src="images/EDM-3.png" alt="menu-item-3">
+                    <img class="menu-item menu-item-4" src="images/EDM-4.png" alt="menu-item-4">
+                    <img class="menu-item menu-item-5" src="images/EDM-5.png" alt="menu-item-5">
+                </div>
+                <div class="row grab position-relative">
+                    <p class="grab-food fw-bold mb-0 mt-1">We're now on Grab Food!</p>
+                    <div class="line"></div>
+                    <p class="grab-food-visit mb-0">Add a touch of joy to your mornings or Visit our outlet</p>
+                    <span class="badge-grab badge position-absolute">GRAB NOW</span>
+                </div>
+                <div class="row cta pt-2 px-4 text-white">
+                    <div class="col-4 ps-4 my-auto">
+                        <div class="footer-img-wrapper py-1 px-1 pe-2">
+                            <img class="footer-img" height="94px" width="114px" decoding="async" src="https://bbnb.sg/wp-content/uploads/2024/01/BBB-logo-FINAL-VERSION-Edited-1024x859.png" alt="bbnb logo">
+                        </div>
+                    </div>
+                    <div class="killiney col-4 d-flex flex-column justify-content-center px-2">
+                        <div class="bg-grey h-100 text-center d-flex flex-column justify-content-center py-3">
+                            <p class="fw-bold mb-2">BB&B KILLINEY</p>
+                            <p class="m-0">83 KILLINEY ROAD, </p>
+                            <p class="m-0">S239531</p>
+                            <p class="telephone m-0">
+                                <a href="tel:+6569963491">+65 6996 3491</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="phoenix col-4 d-flex flex-column justify-content-center px-2">
+                        <div class="bg-pink h-100 text-center d-flex flex-column justify-content-center py-3">
+                            <p class="fw-bold mb-2">BB&B PHOENIX </p>
+                            <p class="m-0">314A TANGLIN ROAD, </p>
+                            <p class="m-0">S247673</p>
+                            <p class="telephone m-0">
+                                <a href="tel:+6566100915">+65 6610 0915</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="square-hr-wrapper">
-            <div class="square-hr"></div>
+            <div class="square-hr-wrapper">
+                <div class="square-hr"></div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1Uy"></script>
